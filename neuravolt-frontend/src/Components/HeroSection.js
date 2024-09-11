@@ -1,8 +1,14 @@
 import gLight from "../assets/gLight.svg" ; 
 import yLight from "../assets/yLight.svg" ; 
+import { useNavigate } from "react-router-dom";
 
 function HeroSection()
 {
+    const navigate = useNavigate() ; 
+
+    function clickHandler(){
+        navigate("/contact-sales")
+    }
 
     return(
 
@@ -20,7 +26,7 @@ function HeroSection()
 
                 <p className="hero-desc">AI-driven insights for optimized electricity demand forecasting and sustainable energy solutions.</p>
 
-                <button className="hero-btn">Know More</button>
+                <button className="hero-btn" onClick={clickHandler} >Get in Touch</button>
                 
             </div>
 
