@@ -60,6 +60,7 @@ body::-webkit-scrollbar {
     justify-content: space-between;
     align-items: center;
     letter-spacing: -0.4px;
+    margin-left:2px ; 
  
 }
 
@@ -71,12 +72,13 @@ body::-webkit-scrollbar {
 
 
 .nav-links{
-    width:19rem ; 
+    width:23rem ; 
     height:1.9rem ; 
     display:flex; 
     justify-content: space-between;
     align-items: center ;
     opacity: var(--sds-size-stroke-border);
+    padding-left:2rem ; 
 }
 
 
@@ -102,7 +104,80 @@ body::-webkit-scrollbar {
 .nav-btn-container{
     display:flex ; 
     justify-content: space-between;
-    width:9.5rem ; 
+    align-items: center ;
+    width:auto  ; 
+    gap:8px ; 
+}
+
+
+.contact-btn{
+    cursor: pointer;
+    max-width:8rem ; 
+    width:auto ; 
+    height: 2.25rem ; 
+    padding:0.4rem 0.8rem ; 
+    display:flex ; 
+    justify-content: center;
+    align-items: center ;
+
+    color: #056FFC;
+    font-family: "DM Sans";
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: -0.005rem ;
+
+    border-radius: 0.375rem;
+    opacity: var(--sds-size-stroke-border);
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    border: 2px solid #056FFC;
+    opacity: 1 ;
+        
+
+}
+
+
+.login-btn.nav-btn{
+    width:auto ; 
+    padding:0.4rem 0.6rem ; 
+    height:2.2rem ; 
+    cursor: pointer;
+
+    /* font-family: "DM Sans";
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: -0.005rem ; */
+
+    color: var(--Labels-Primary, #000);
+    font-family: "DM Sans";
+    font-size: 0.8525rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.01625rem;
+
+    display:flex ; 
+    align-items: center;
+    gap:4px ;
+    border:none ; 
+    
+    span{
+        margin-top:1px ; 
+        font-weight: 500 ;
+        
+    }
+}
+
+#login-only{
+    font-size: 0.895rem ;
+}
+
+
+.user-icon{
+    width:1rem ; 
+    height:1rem ; 
+    font-weight: 900;
 }
 
 
@@ -125,13 +200,14 @@ body::-webkit-scrollbar {
 .hero-content{
     display: flex;
     width: 48rem;
-    max-height:21rem ;
+    max-height:23rem ;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     gap: 1.8rem;
     /* border:2px solid black ;  */
     margin:6.3rem auto ;
+    padding-bottom: 20px ;
 
     padding-right:3px ; /* not ideal */ 
 
@@ -169,9 +245,40 @@ body::-webkit-scrollbar {
 
 
 .hero-btn{
-    margin-top:2rem ;
+    border:none ; 
+    height:3.15rem ; 
+    width:10rem ;
     align-self: center ;
+    display:flex ; 
+    justify-content: center;
+    align-items: center;
+    background-color:#056DF8;
+    margin:5px ; 
+    margin-top:1.3rem ;
+    margin-right:0.75rem ; 
+    letter-spacing: -0.012rem;
+    z-index:50 ; 
+
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    border-radius: 10px; 
+
+    color: var(--White, #FFF);
+    font-family: "DM Sans";
+    font-size: 1.1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.75rem; /* 155.556% */
+}   
+
+.hero-btn:hover{
+    transform: scale(1.01);
+    background-color:#1278fe ; 
+    transition: all 0.1s ease-in ; 
+    cursor:pointer ; 
+    /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
+
 
 .hero-grey-light{
     position:absolute ; 
@@ -371,6 +478,12 @@ body::-webkit-scrollbar {
     overflow: hidden;          /* Hide overflowed content */
     visibility: hidden;        /* Initially hidden */
     transition: max-height 0.4s ease, opacity 0.4s ease, padding 0.4s ease, visibility 0s ease 0.4s;
+    font-family: 'DM Sans';
+    font-size: 1.05rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 1.875rem */
+
 }
   
 
@@ -536,13 +649,13 @@ transition: all 0.5s cubic-bezier (1,0,1,0); */
 }
 
 
-.login-input-container input:hover {
+/* .login-input-container input:hover {
     border:2px solid #2e86fa ;
 
-}
+} */
 
 .login-input-container input:focus {
-    border:2px solid #1b7dfe ;
+    border:1px solid #1b7dfe ;
 
 }
 
@@ -610,6 +723,13 @@ transition: all 0.5s cubic-bezier (1,0,1,0); */
 }
 
 
+.contact-sales-form-container{
+    display:flex ; 
+    flex-direction: column;
+    width:auto ; 
+    height:auto ; 
+    margin:10px auto ; 
+}
 
 
 
@@ -621,10 +741,10 @@ transition: all 0.5s cubic-bezier (1,0,1,0); */
 
 
 .contact-sales-form{
-    max-width:48vw ; 
+    max-width:40vw ; 
     min-width: 20rem;
     width:auto ; 
-    height:63vh ;
+    min-height:63vh ;
     border-radius: 0.625rem;
     opacity: var(--sds-size-stroke-border);
     padding:1rem ;  
@@ -668,6 +788,15 @@ transition: all 0.5s cubic-bezier (1,0,1,0); */
     color:#757575 ; 
 }
 
+/* .contact-fields-container input:hover{
+    border:2px solid  #2e86fa ;
+} */
+
+
+.contact-fields-container input:focus{
+      border:1px solid #1b7dfe ;
+}
+
 .contact-fields-container label{ 
     font-family: 'DM Sans' ; 
     color: var(--Labels-Primary, #000);
@@ -695,7 +824,6 @@ transition: all 0.5s cubic-bezier (1,0,1,0); */
     flex-direction:column ; 
     align-items: center ;
     justify-content: space-between;
-    border:1px solid blueviolet ; 
     gap:0.33rem ; 
 
     label{
@@ -719,14 +847,71 @@ transition: all 0.5s cubic-bezier (1,0,1,0); */
     display:flex ; 
     justify-content:space-between ;
     align-items: center ;
+    gap:12px ; 
 
 
     > div{
         display: flex ;
-        flex-direction: column; 
+        flex-direction: column;
+
+        
     }
 
 }
+
+#business-email-container{
+    width:58% ;  
+}
+
+
+#phone-no-container{
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0%;
+}
+
+
+.contact-fields-container :nth-child(4){
+    height:auto ; 
+    margin-bottom:2rem; 
+
+    textarea{
+        display:flex ; 
+        all:unset ; 
+        border-radius: 2px ;
+        background-color:white ; 
+        width:95% ; 
+        border-radius: var(--sds-size-radius-200);
+        border: 1px solid var(--sds-color-border-default-default);
+        opacity: var(--sds-size-stroke-border);
+        background: var(--sds-color-background-default-default);
+        font-size:0.9rem ; 
+        padding:12px 10px ; 
+        border-radius: 7px ;
+        min-height:5rem ;
+    
+        font-style: normal;
+        line-height: 100%;
+        color:#757575 ; 
+
+    }
+    
+}
+
+
+
+
+
+/* #message:hover{
+    border:1px solid  #2e86fa ;
+} */
+
+
+#message:focus{
+      border:1px solid #1b7dfe ;
+}
+
+
 
 
 
@@ -734,7 +919,26 @@ transition: all 0.5s cubic-bezier (1,0,1,0); */
     margin-bottom:0.55rem ;
 }
 .contact-sales-form-btn{
-    width:100% ; 
+    width:95% ; 
     display:flex ; 
     justify-content: center ;
+
+    height:2.5rem ; 
+    padding: 0.7rem auto ;
+    background-color: #FFD60A;
+    display:flex; 
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem ;
+ 
+    color: var(--Labels-Primary, #000);
+
+    font-family: "DM Sans" ; 
+    font-size: var(--sds-typography-body-size-medium);
+    font-style: normal;
+    font-weight: var(--sds-typography-body-font-weight-regular);
+    line-height: 100%; /* 1rem */
+    font-weight: 400;
+    border-radius: 0.45rem ;
+    border:none
 }
